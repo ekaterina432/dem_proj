@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <title>User Details</title>
+</head>
+<body>
+<h1>User Details</h1>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Full Name</th>
+    <th>Age</th>
+    <th>Study</th>
+    <th>Scholarship</th>
+  </tr>
+  <tr>
+    <td th:text="${user.id}"></td>
+    <td th:text="${user.full_name}"></td>
+    <td th:text="${user.age}"></td>
+    <td th:text="${user.study}"></td>
+    <td th:text="${user.scholarship}"></td>
+  </tr>
+</table>
+<a href="/users">Back to Users</a>
+</body>
+</html>

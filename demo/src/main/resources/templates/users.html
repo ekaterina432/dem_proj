@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Users</title>
+</head>
+<body>
+<h1>Users</h1>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Full Name</th>
+    <th>Age</th>
+    <th>Study</th>
+    <th>Scholarship</th>
+    <th></th>
+  </tr>
+  <tr th:each="user : ${users}">
+    <td th:text="${user.id}"></td>
+    <td th:text="${user.full_name}"></td>
+    <td th:text="${user.age}"></td>
+    <td th:text="${user.study}"></td>
+    <td th:text="${user.scholarship}"></td>
+    <td><a th:href="@{/users/{id}/delete(id=${user.id})}">Delete</a></td>
+  </tr>
+</table>
+<a href="/users/new">Create User</a>
+</body>
+</html>
